@@ -51,7 +51,6 @@ class BookingQueue {
     }
 }
 
-
 public class UseCase5BookingRequestQueue {
     public static void main(String[] args) {
         System.out.println("******************************************");
