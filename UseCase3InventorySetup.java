@@ -5,7 +5,6 @@ import java.util.Map;
 class RoomInventory {
 
     private Map<String, Integer> inventory;
-
     public RoomInventory() {
         this.inventory = new HashMap<>();
     }
@@ -43,7 +42,6 @@ public class UseCase3InventorySetup {
         String searchType = "Double Room";
         System.out.println("Quick Check: " + searchType + " has " + 
                            hotelInventory.getAvailableCount(searchType) + " spots.");
-
         hotelInventory.displayInventory();
     }
 }

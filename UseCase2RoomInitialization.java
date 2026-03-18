@@ -12,7 +12,6 @@ abstract class Room {
 
     public abstract void displayDetails();
 }
-
 class SingleRoom extends Room {
     public SingleRoom() {
         super("Single Room", 1500.0, "Single Bed, Wi-Fi, AC");
