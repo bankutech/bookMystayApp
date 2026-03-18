@@ -13,7 +13,6 @@ abstract class Room {
     public abstract void displayDetails();
 }
 
-
 class SingleRoom extends Room {
     public SingleRoom() {
         super("Single Room", 1500.0, "Single Bed, Wi-Fi, AC");
@@ -35,6 +34,8 @@ class DoubleRoom extends Room {
         System.out.println("Type: " + roomType + " | Price: " + price + " | Amenities: " + amenities);
     }
 }
+
+
 class SuiteRoom extends Room {
     public SuiteRoom() {
         super("Suite Room", 5000.0, "King Size Bed, Wi-Fi, AC, Jacuzzi, Balcony");
@@ -51,6 +52,7 @@ public class UseCase2RoomInitialization {
         System.out.println("   Book My Stay - Room Initialization   ");
         System.out.println("   Version: 2.0                          ");
         System.out.println("******************************************");
+
         Room single = new SingleRoom();
         Room doubleRm = new DoubleRoom();
         Room suite = new SuiteRoom();
@@ -69,7 +71,6 @@ public class UseCase2RoomInitialization {
         doubleRm.displayDetails();
         System.out.println("Count Available: " + doubleAvailable);
         System.out.println("------------------------------------------");
-
         suite.displayDetails();
         System.out.println("Count Available: " + suiteAvailable);
         System.out.println("------------------------------------------");

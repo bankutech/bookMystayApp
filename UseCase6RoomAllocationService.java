@@ -1,10 +1,8 @@
 import java.util.*;
-
-
 class AllocationService {
     private Map<String, Integer> inventory;
     private Set<String> allocatedRoomIds;
-    private int idCounter = 101; // Starting room numbers
+    private int idCounter = 101;
 
     public AllocationService(Map<String, Integer> inventory) {
         this.inventory = inventory;
@@ -16,6 +14,7 @@ class AllocationService {
 
         if (available > 0) {
             String roomId = type.substring(0, 1).toUpperCase() + idCounter++;
+
             if (!allocatedRoomIds.contains(roomId)) {
                 allocatedRoomIds.add(roomId);
                 inventory.put(type, available - 1);
@@ -37,22 +36,21 @@ public class UseCase6RoomAllocationService {
         System.out.println("   Book My Stay - Allocation Service    ");
         System.out.println("   Version: 6.0                          ");
         System.out.println("******************************************");
-
         Map<String, Integer> hotelInventory = new HashMap<>();
         hotelInventory.put("Single Room", 2);
         hotelInventory.put("Suite Room", 1);
-
         Queue<ReservationRequest> queue = new LinkedList<>();
         queue.offer(new ReservationRequest("Alice", "Suite Room"));
         queue.offer(new ReservationRequest("Bob", "Single Room"));
         queue.offer(new ReservationRequest("Charlie", "Suite Room"));
         queue.offer(new ReservationRequest("Diana", "Single Room"));
+
         AllocationService allocationService = new AllocationService(hotelInventory);
 
         System.out.println("Processing Queue...");
         System.out.println("------------------------------------------");
         while (!queue.isEmpty()) {
-            ReservationRequest currentRequest = queue.poll(); // Dequeue
+            ReservationRequest currentRequest = queue.poll();
             allocationService.processBooking(currentRequest);
         }
         System.out.println("------------------------------------------");

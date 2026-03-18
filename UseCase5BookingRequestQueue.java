@@ -20,16 +20,20 @@ class ReservationRequest {
     }
 }
 
-class BookingQueue {
 
+class BookingQueue {
     private Queue<ReservationRequest> requestQueue;
+
     public BookingQueue() {
         this.requestQueue = new LinkedList<>();
     }
+
     public void addRequest(ReservationRequest request) {
         requestQueue.offer(request);
         System.out.println("Enqueued: " + request);
     }
+
+
     public void showQueue() {
         System.out.println("\nCurrent Booking Request Queue (FIFO Order):");
         System.out.println("------------------------------------------");
@@ -54,14 +58,12 @@ public class UseCase5BookingRequestQueue {
         System.out.println("   Book My Stay - Booking Intake System  ");
         System.out.println("   Version: 5.0                          ");
         System.out.println("******************************************");
-
         BookingQueue bookingOffice = new BookingQueue();
         bookingOffice.addRequest(new ReservationRequest("Alice", "Suite Room"));
         bookingOffice.addRequest(new ReservationRequest("Bob", "Single Room"));
         bookingOffice.addRequest(new ReservationRequest("Charlie", "Suite Room"));
         bookingOffice.addRequest(new ReservationRequest("Diana", "Double Room"));
         bookingOffice.showQueue();
-
         System.out.println("Status: Requests collected and ordered. Ready for allocation.");
     }
 }

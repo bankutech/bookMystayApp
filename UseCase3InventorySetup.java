@@ -1,8 +1,11 @@
 import java.util.HashMap;
 import java.util.Map;
 
+
 class RoomInventory {
+
     private Map<String, Integer> inventory;
+
     public RoomInventory() {
         this.inventory = new HashMap<>();
     }
@@ -21,14 +24,12 @@ class RoomInventory {
         System.out.println("-----------------------");
     }
 }
-
 public class UseCase3InventorySetup {
     public static void main(String[] args) {
         System.out.println("******************************************");
         System.out.println("   Book My Stay - Centralized Inventory   ");
         System.out.println("   Version: 3.0                          ");
         System.out.println("******************************************");
-
         RoomInventory hotelInventory = new RoomInventory();
         hotelInventory.updateInventory("Single Room", 10);
         hotelInventory.updateInventory("Double Room", 5);

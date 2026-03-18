@@ -1,5 +1,7 @@
+
 public class UseCase1HotelBookingApp {
-    public static void main(String[] args) {
+
+    public static void main(String[] args){
         System.out.println("******************************************");
         System.out.println("   Welcome to Book My Stay Application   ");
         System.out.println("******************************************");
