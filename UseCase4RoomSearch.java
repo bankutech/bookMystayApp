@@ -1,7 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
 
-
 abstract class Room {
     protected String roomType;
     protected double price;
