@@ -1,28 +1,21 @@
 import java.util.HashMap;
 import java.util.Map;
-
-
 abstract class Room {
     protected String roomType;
     protected double price;
     protected String amenities;
-
     public Room(String roomType, double price, String amenities) {
         this.roomType = roomType;
         this.price = price;
         this.amenities = amenities;
     }
-
     public String getRoomType() { return roomType; }
     public double getPrice() { return price; }
     public String getAmenities() { return amenities; }
 }
-
 class SingleRoom extends Room { public SingleRoom() { super("Single Room", 1500.0, "Single Bed, Wi-Fi"); } }
 class DoubleRoom extends Room { public DoubleRoom() { super("Double Room", 2500.0, "Double Bed, Wi-Fi, AC"); } }
 class SuiteRoom extends Room { public SuiteRoom() { super("Suite Room", 5000.0, "King Bed, Jacuzzi"); } }
-
-
 class SearchService {
     private Map<String, Integer> inventory;
     private Map<String, Room> roomTemplates;
@@ -35,8 +28,6 @@ class SearchService {
         roomTemplates.put("Double Room", new DoubleRoom());
         roomTemplates.put("Suite Room", new SuiteRoom());
     }
-
-
     public void searchAvailableRooms() {
         System.out.println("Displaying Available Rooms:");
         System.out.println("------------------------------------------");
