@@ -95,7 +95,6 @@ public class UseCase12DataPersistenceRecovery {
 
     public static void main(String[] args) {
         UseCase12DataPersistenceRecovery app = new UseCase12DataPersistenceRecovery();
-        
         System.out.println("--- Book My Stay: Use Case 12 - Data Persistence & Recovery ---");
         app.initialize();
         app.showStatus();
