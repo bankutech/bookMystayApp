@@ -67,7 +67,7 @@ class BookingSystem {
     }
 }
 
-public class UseCase9ErrorHandlingValidation {
+public class UseCase10BookingCancellationAndInventoryRollback {
     public static void main(String[] args) {
         BookingSystem system = new BookingSystem();
 
