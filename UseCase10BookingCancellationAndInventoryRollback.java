@@ -2,7 +2,6 @@ import java.util.*;
 class InvalidRoomTypeException extends Exception {
     public InvalidRoomTypeException(String message) { super(message); }
 }
-
 class InsufficientInventoryException extends Exception {
     public InsufficientInventoryException(String message) { super(message); }
 }
@@ -64,7 +63,7 @@ class BookingSystem {
         System.out.println("\n--- FINAL BOOKING HISTORY REPORT ---");
         if (history.isEmpty()) System.out.println("No successful bookings.");
         else history.forEach(System.out::println);
-        System.out.println("------------------------------------");
+
     }
 }
 
