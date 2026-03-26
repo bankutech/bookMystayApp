@@ -27,7 +27,6 @@ class Booking {
 
 class BookingHistory {
     private List<Booking> history;
-
     public BookingHistory() {
         this.history = new ArrayList<>();
     }
