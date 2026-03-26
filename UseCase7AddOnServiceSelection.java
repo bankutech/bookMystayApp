@@ -11,7 +11,6 @@ class Service {
     public String getServiceName() {
         return serviceName;
     }
-
     public double getPrice() {
         return price;
     }
